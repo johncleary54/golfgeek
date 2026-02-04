@@ -1,0 +1,98 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    /* Can remove some if we don't need them all, just adding them all for now */
+    @font-face {
+        font-family: Archivo;
+        font-weight: 100;
+        src: url(/fonts/Archivo-Thin.ttf);
+    }
+    @font-face {
+        font-family: Archivo;
+        font-weight: 200;
+        src: url(/fonts/Archivo-ExtraLight.ttf);
+    }
+    @font-face {
+        font-family: Archivo;
+        font-weight: 300;
+        src: url(/fonts/Archivo-Light.ttf);
+    }
+    @font-face {
+        font-family: Archivo;
+        font-weight: 400;
+        src: url(/fonts/Archivo-Regular.ttf);
+    }
+    @font-face {
+        font-family: Archivo;
+        font-weight: 500;
+        src: url(/fonts/Archivo-Medium.ttf);
+    }
+    @font-face {
+        font-family: Archivo;
+        font-weight: 600;
+        src: url(/fonts/Archivo-SemiBold.ttf);
+    }
+    @font-face {
+        font-family: Archivo;
+        font-weight: 700;
+        src: url(/fonts/Archivo-Bold.ttf);
+    }
+    @font-face {
+        font-family: Archivo;
+        font-weight: 800;
+        src: url(/fonts/Archivo-ExtraBold.ttf);
+    }
+    @font-face {
+        font-family: Archivo;
+        font-weight: 900;
+        src: url(/fonts/Archivo-Black.ttf);
+    }
+}
+
+/* hide scrollbar */
+::-webkit-scrollbar {
+    display: none;
+}
+
+/* hide scrollbar for IE, Edge and Firefox */
+html {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+}
+
+:focus {
+    outline: none;
+}
+
+body {
+    @apply text-black bg-neutral-50 font-archivo;
+    font-feature-settings: "rlig" 1, "calt" 1;
+}
+
+h1 {
+    @apply text-3xl font-bold;
+}
+
+h2 {
+    @apply text-2xl font-bold;
+}
+
+h3 {
+    @apply text-xl font-bold;
+}
+
+p {
+    margin: 0;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+    display: none;
+}
+
+/* For IE, Edge and Firefox */
+.scrollbar-hide {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+}

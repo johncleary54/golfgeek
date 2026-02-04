@@ -1,0 +1,25 @@
+version: "3"
+services:
+  client:
+    container_name: golf-geek-client
+    build:
+      context: ./client
+      dockerfile: Dockerfile.dev
+    working_dir: /app
+    volumes:
+      - ./client/src:/app/src
+      - ./client/.svelte-kit:/app/.svelte-kit
+    ports:
+      - 3000:3000
+    depends_on:
+      - server
+  server:
+    container_name: golf-geek-server
+    build:
+      context: ./pocketbase
+    working_dir: /pb
+    volumes:
+      - ./pocketbase/pb_data:/pb/pb_data
+      - ./pocketbase/pb_migrations:/pb/pb_migrations
+    ports:
+      - 8080:8080

@@ -1,0 +1,29 @@
+name: Deploy
+
+on:
+  push:
+    branches:
+      - release
+
+jobs:
+  lint:
+    uses: ./.github/workflows/lint-client.yml
+  deploy:
+    needs: lint
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: appleboy/ssh-action@v0.1.10
+        with:
+          host: 35.225.146.228
+          username: mat
+          key: ${{ secrets.SSH_KEY }}
+          passphrase: ${{ secrets.SSH_PASS }}
+          script_stop: true
+          command_timeout: 60m
+          script: |
+            whoami
+            cd /home/mat/solace-golf-geek
+            git checkout release
+            git pull
+            docker-compose -f docker-compose.prod.yml up -d --build

@@ -1,0 +1,33 @@
+name: Lint client
+on:
+  workflow_call:
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ./client
+    steps:
+      - name: Check out repository code
+        uses: actions/checkout@v3
+
+      - name: Install pnpm
+        uses: pnpm/action-setup@v2
+        with:
+          version: "8.x.x"
+
+      - name: Copy env vars
+        run: cp .env.example .env
+
+      - name: Install dependencies
+        run: pnpm i
+
+      - name: Build
+        run: pnpm run build
+
+      - name: Lint
+        run: pnpm run lint
+
+      - name: Svelte Check
+        run: pnpm run check
+      #- run: npm run test

@@ -1,0 +1,70 @@
+import type { Writable } from "svelte/store";
+
+export enum PredictorType {
+    OffAverageDrivingDistance = "OFF_AVERAGE_DRIVING_DISTANCE",
+    OffPoorDrivePercentage = "OFF_POOR_DRIVE_PERCENTAGE",
+    OffFairwayAccuracy = "OFF_FAIRWAY_ACCURACY",
+    Putting_2ft = "PUTTING_2FT",
+    Putting_3_5ft = "PUTTING_3_5FT",
+    Putting_6_9ft = "PUTTING_6_9FT",
+    Putting_10_15ft = "PUTTING_10_15FT",
+    Putting_16_25ft_One_Putt = "PUTTING_16_25FT_ONE_PUTT",
+    Putting_16_25ft_Average_Proximity = "PUTTING_16_25FT_AVERAGE_PROXIMITY",
+    Putting_26_40ft_One_Putt = "PUTTING_26_40FT_ONE_PUTT",
+    Putting_26_40ft_Average_Proximity = "PUTTING_26_40FT_AVERAGE_PROXIMITY",
+    Putting_41_60ft_One_Putt = "PUTTING_41_60FT_ONE_PUTT",
+    Putting_41_60ft_Average_Proximity = "PUTTING_41_60FT_AVERAGE_PROXIMITY",
+    Putting_61ft_Plus_One_Putt = "PUTTING_61FT_PLUS_ONE_PUTT",
+    Putting_61ft_Plus_Average_Proximity = "PUTTING_61FT_PLUS_AVERAGE_PROXIMITY",
+    Approach_Fairway_101_150_Proximity = "APPROACH_FAIRWAY_101_125_PROXIMITY",
+    Approach_Fairway_101_150_Green_Hit = "APPROACH_FAIRWAY_101_125_GREEN_HIT",
+    Approach_Fairway_151_200_Proximity = "APPROACH_FAIRWAY_151_175_PROXIMITY",
+    Approach_Fairway_151_200_Green_Hit = "APPROACH_FAIRWAY_151_175_GREEN_HIT",
+    Approach_Fairway_151_200_Poor_Shot = "APPROACH_FAIRWAY_151_175_POOR_SHOT",
+    Approach_Fairway_201_250_Proximity = "APPROACH_FAIRWAY_201_225_PROXIMITY",
+    Approach_Fairway_201_250_Green_Hit = "APPROACH_FAIRWAY_201_225_GREEN_HIT",
+    Approach_Fairway_201_250_Poor_Shot = "APPROACH_FAIRWAY_201_225_POOR_SHOT",
+    Approach_Fairway_251_Plus_Proximity = "APPROACH_FAIRWAY_251_PLUS_PROXIMITY",
+    Approach_Fairway_251_Plus_Green_Hit = "APPROACH_FAIRWAY_251_PLUS_GREEN_HIT",
+    Approach_Fairway_251_Plus_Poor_Shot = "APPROACH_FAIRWAY_251_PLUS_POOR_SHOT",
+    Approach_Rough_101_150_Proximity = "APPROACH_ROUGH_101_125_PROXIMITY",
+    Approach_Rough_101_150_Green_Hit = "APPROACH_ROUGH_101_125_GREEN_HIT",
+    Approach_Rough_151_200_Proximity = "APPROACH_ROUGH_151_175_PROXIMITY",
+    Approach_Rough_151_200_Green_Hit = "APPROACH_ROUGH_151_175_GREEN_HIT",
+    Approach_Rough_151_200_Poor_Shot = "APPROACH_ROUGH_151_175_POOR_SHOT",
+    Approach_Rough_201_250_Proximity = "APPROACH_ROUGH_201_225_PROXIMITY",
+    Approach_Rough_201_250_Green_Hit = "APPROACH_ROUGH_201_225_GREEN_HIT",
+    Approach_Rough_201_250_Poor_Shot = "APPROACH_ROUGH_201_225_POOR_SHOT",
+    Approach_Rough_251_Plus_Proximity = "APPROACH_ROUGH_251_PLUS_PROXIMITY",
+    Approach_Rough_251_Plus_Green_Hit = "APPROACH_ROUGH_251_PLUS_GREEN_HIT",
+    Approach_Rough_251_Plus_Poor_Shot = "APPROACH_ROUGH_251_PLUS_POOR_SHOT",
+    ShortGame_Fairway_0_25_Proximity = "SHORT_GAME_FAIRWAY_0_25_PROXIMITY",
+    ShortGame_Fairway_0_25_Hole_Out = "SHORT_GAME_FAIRWAY_0_25_HOLE_OUT",
+    ShortGame_Fairway_26_50_Proximity = "SHORT_GAME_FAIRWAY_26_50_PROXIMITY",
+    ShortGame_Fairway_26_50_Green_Hit = "SHORT_GAME_FAIRWAY_26_50_GREEN_HIT",
+    ShortGame_Fairway_51_75_Proximity = "SHORT_GAME_FAIRWAY_51_75_PROXIMITY",
+    ShortGame_Fairway_51_75_Green_Hit = "SHORT_GAME_FAIRWAY_51_75_GREEN_HIT",
+    ShortGame_Fairway_76_100_Proximity = "SHORT_GAME_FAIRWAY_76_100_PROXIMITY",
+    ShortGame_Fairway_76_100_Green_Hit = "SHORT_GAME_FAIRWAY_76_100_GREEN_HIT",
+    ShortGame_Rough_0_25_Proximity = "SHORT_GAME_ROUGH_0_25_PROXIMITY",
+    ShortGame_Rough_0_25_Green_Hit = "SHORT_GAME_ROUGH_0_25_GREEN_HIT",
+    ShortGame_Rough_26_50_Proximity = "SHORT_GAME_ROUGH_26_50_PROXIMITY",
+    ShortGame_Rough_26_50_Green_Hit = "SHORT_GAME_ROUGH_26_50_GREEN_HIT",
+    ShortGame_Rough_51_75_Proximity = "SHORT_GAME_ROUGH_51_75_PROXIMITY",
+    ShortGame_Rough_51_75_Green_Hit = "SHORT_GAME_ROUGH_51_75_GREEN_HIT",
+    ShortGame_Rough_76_100_Proximity = "SHORT_GAME_ROUGH_76_100_PROXIMITY",
+    ShortGame_Rough_76_100_Green_Hit = "SHORT_GAME_ROUGH_76_100_GREEN_HIT",
+    ShortGame_Sand_0_25_Proximity = "SHORT_GAME_SAND_0_25_PROXIMITY",
+    ShortGame_Sand_0_25_Green_Hit = "SHORT_GAME_SAND_0_25_GREEN_HIT",
+    ShortGame_Sand_26_50_Proximity = "SHORT_GAME_SAND_26_50_PROXIMITY",
+    ShortGame_Sand_26_50_Green_Hit = "SHORT_GAME_SAND_26_50_GREEN_HIT",
+}
+
+export type DataType = {
+    title: string;
+    tooltip: string;
+    sliderValue: Writable<number[]>;
+    predictorType: PredictorType;
+    unit: string;
+    maxRange: number;
+};
