@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+<Document><name>Test Hole 1</name>
+  <Placemark>
+    <name>Tee 1</name>
+    <ExtendedData>
+      <Data name="zone"><value>tee</value></Data>
+      <Data name="hole_number"><value>1</value></Data>
+      <Data name="par"><value>4</value></Data>
+    </ExtendedData>
+    <Point><coordinates>-76.000000000,40.000000000,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+    <name>Cup 1</name>
+    <ExtendedData>
+      <Data name="zone"><value>cup</value></Data>
+      <Data name="hole_number"><value>1</value></Data>
+    </ExtendedData>
+    <Point><coordinates>-75.996032556,40.000000000,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+    <name>Target line</name>
+    <ExtendedData>
+      <Data name="zone"><value>target_line</value></Data>
+    </ExtendedData>
+    <LineString><coordinates>
+      -76.000000000,40.000000000,0 -75.997889208,40.000000000,0 -75.996032556,40.000000000,0
+    </coordinates></LineString>
+  </Placemark>
+  <Placemark>
+    <name>Rough</name>
+    <ExtendedData>
+      <Data name="zone"><value>rough</value></Data>
+      <Data name="firmness"><value>0.6</value></Data>
+      <Data name="rough_length_in"><value>2.5</value></Data>
+    </ExtendedData>
+    <Polygon><outerBoundaryIs><LinearRing><coordinates>
+      -76.000175899,39.999640676,0 -75.995739391,39.999640676,0 -75.995739391,40.000359324,0 -76.000175899,40.000359324,0 -76.000175899,39.999640676,0
+    </coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+    <name>Fairway</name>
+    <ExtendedData>
+      <Data name="zone"><value>fairway</value></Data>
+      <Data name="firmness"><value>0.85</value></Data>
+    </ExtendedData>
+    <Polygon><outerBoundaryIs><LinearRing><coordinates>
+      -75.999882734,39.999876788,0 -75.996325722,39.999876788,0 -75.996325722,40.000123212,0 -75.999882734,40.000123212,0 -75.999882734,39.999876788,0
+    </coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+    <name>Green</name>
+    <ExtendedData>
+      <Data name="zone"><value>green</value></Data>
+      <Data name="firmness"><value>0.9</value></Data>
+    </ExtendedData>
+    <Polygon><outerBoundaryIs><LinearRing><coordinates>
+      -75.995898521,40.000000000,0 -75.995903088,40.000026575,0 -75.995916478,40.000051338,0 -75.995937779,40.000072604,0 -75.995965539,40.000088921,0 -75.995997865,40.000099178,0 -75.996032556,40.000102677,0 -75.996067247,40.000099178,0 -75.996099574,40.000088921,0 -75.996127334,40.000072604,0 -75.996148634,40.000051338,0 -75.996162024,40.000026575,0 -75.996166592,40.000000000,0 -75.996162024,39.999973425,0 -75.996148634,39.999948662,0 -75.996127334,39.999927396,0 -75.996099574,39.999911079,0 -75.996067247,39.999900822,0 -75.996032556,39.999897323,0 -75.995997865,39.999900822,0 -75.995965539,39.999911079,0 -75.995937779,39.999927396,0 -75.995916478,39.999948662,0 -75.995903088,39.999973425,0 -75.995898521,40.000000000,0
+    </coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+    <name>Greenside bunker left</name>
+    <ExtendedData>
+      <Data name="zone"><value>sand</value></Data>
+      <Data name="firmness"><value>0.4</value></Data>
+    </ExtendedData>
+    <Polygon><outerBoundaryIs><LinearRing><coordinates>
+      -75.996073599,40.000116780,0 -75.996077616,40.000132250,0 -75.996089055,40.000145365,0 -75.996106175,40.000154127,0 -75.996126369,40.000157204,0 -75.996146563,40.000154127,0 -75.996163683,40.000145365,0 -75.996175122,40.000132250,0 -75.996179139,40.000116780,0 -75.996175122,40.000101311,0 -75.996163683,40.000088196,0 -75.996146563,40.000079434,0 -75.996126369,40.000076356,0 -75.996106175,40.000079434,0 -75.996089055,40.000088196,0 -75.996077616,40.000101311,0 -75.996073599,40.000116780,0
+    </coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+    <name>Greenside bunker right</name>
+    <ExtendedData>
+      <Data name="zone"><value>sand</value></Data>
+      <Data name="firmness"><value>0.4</value></Data>
+    </ExtendedData>
+    <Polygon><outerBoundaryIs><LinearRing><coordinates>
+      -75.995915290,39.999892203,0 -75.995918861,39.999905953,0 -75.995929029,39.999917611,0 -75.995944246,39.999925400,0 -75.995962197,39.999928135,0 -75.995980147,39.999925400,0 -75.995995364,39.999917611,0 -75.996005532,39.999905953,0 -75.996009103,39.999892203,0 -75.996005532,39.999878452,0 -75.995995364,39.999866795,0 -75.995980147,39.999859005,0 -75.995962197,39.999856270,0 -75.995944246,39.999859005,0 -75.995929029,39.999866795,0 -75.995918861,39.999878452,0 -75.995915290,39.999892203,0
+    </coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+    <name>Water hazard</name>
+    <ExtendedData>
+      <Data name="zone"><value>water</value></Data>
+
+    </ExtendedData>
+    <Polygon><outerBoundaryIs><LinearRing><coordinates>
+      -75.997889208,39.999658642,0 -75.997185611,39.999658642,0 -75.997185611,39.999820338,0 -75.997889208,39.999820338,0 -75.997889208,39.999658642,0
+    </coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+    <name>Tree 1</name>
+    <ExtendedData>
+      <Data name="zone"><value>tree</value></Data>
+      <Data name="radius_ft"><value>6.0</value></Data>
+      <Data name="height_ft"><value>55.0</value></Data>
+      <Data name="density"><value>0.6</value></Data>
+    </ExtendedData>
+    <Point><coordinates>-75.998241007,40.000233561,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+    <name>Tree 2</name>
+    <ExtendedData>
+      <Data name="zone"><value>tree</value></Data>
+      <Data name="radius_ft"><value>7.0</value></Data>
+      <Data name="height_ft"><value>50.0</value></Data>
+      <Data name="density"><value>0.5</value></Data>
+    </ExtendedData>
+    <Point><coordinates>-75.997889208,39.999712540,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+    <name>Tree 3</name>
+    <ExtendedData>
+      <Data name="zone"><value>tree</value></Data>
+      <Data name="radius_ft"><value>5.0</value></Data>
+      <Data name="height_ft"><value>45.0</value></Data>
+      <Data name="density"><value>0.4</value></Data>
+    </ExtendedData>
+    <Point><coordinates>-75.996951079,40.000197628,0</coordinates></Point>
+  </Placemark>
+</Document></kml>

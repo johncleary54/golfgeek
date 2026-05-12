@@ -1,0 +1,19 @@
+[project]
+name = "golf-sg"
+version = "0.0.1"
+description = "Personalized Strokes Gained engine for golf"
+requires-python = ">=3.11"
+dependencies = [
+    "kml-parser",
+]
+
+[tool.uv.sources]
+kml-parser = { workspace = true }
+
+[tool.uv.workspace]
+members = ["packages/*"]
+
+[dependency-groups]
+dev = [
+    "pytest>=8.0",
+]
